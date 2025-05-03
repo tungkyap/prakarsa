@@ -1,0 +1,118 @@
+:root {
+  --primary: #0d6efd;
+  --background: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  background-color: var(--background);
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero {
+  background: var(--primary);
+  color: var(--text-light);
+  text-align: center;
+  padding: 4em 1em;
+}
+
+nav {
+  margin-top: 1em;
+}
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+nav a:hover {
+  opacity: 0.8;
+}
+
+.section {
+  padding: 4em 0;
+}
+.section.alt {
+  background-color: #fff;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: var(--primary);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.card {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 500px;
+  margin: auto;
+}
+input, textarea {
+  padding: 0.8em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #084298;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 2em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
